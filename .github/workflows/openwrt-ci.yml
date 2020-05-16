@@ -130,7 +130,7 @@ jobs:
 
           #IPv6支持:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+          # CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
           EOF
 
@@ -246,5 +246,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt_firmware
-          path: ./bin/
-      
+          path: ./bin/targets/
